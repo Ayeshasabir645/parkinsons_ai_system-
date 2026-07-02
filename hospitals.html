@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hospitals Parkinson's AI System</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="layout">
+  <div id="sidebar-placeholder"></div>
+  <div class="main">
+    <div id="topbar-placeholder"></div>
+    <div class="page-content">
+
+      <div class="page-hdr-row">
+        <div class="page-header" style="margin-bottom:0;">
+          <h1>Hospitals</h1>
+          <p>Manage All Connected Hospitals</p>
+        </div>
+        <button class="btn-primary" onclick="alert('Add Hospital form coming soon!')">Add Hospital</button>
+      </div>
+
+      <div class="card">
+        <table class="data-table">
+
+            <tr>
+              <th>Hospital</th>
+              <th>Location</th>
+              <th>Clients</th>
+              <th>Samples</th>
+              <th>Last Active</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+         
+            <tr>
+              <td><strong>Hospital A</strong></td>
+              <td>Islamabad</td><td>6</td>
+              <td>2,350</td>
+              <td>2 mins ago</td>
+              <td><span class="badge b-success">Active</span></td>
+              <td><span class="act-link">View</span>
+                <span class="act-link">Edit</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Hospital B</strong></td>
+              <td>Lahore</td>
+              <td>5</td>
+              <td>1,980</td>
+              <td>3 mins ago</td>
+              <td><span class="badge b-success">Active</span>
+              </td>
+              <td><span class="act-link">View</span>
+                <span class="act-link">Edit</span></td>
+            </tr>
+
+            <tr>
+              <td><strong>Hospital C</strong></td>
+              <td>Karachi</td>
+              <td>6</td>
+              <td>2,100</td>
+              <td>4 mins ago</td>
+              <td><span class="badge b-success">Active</span></td>
+              <td><span class="act-link">View</span><span class="act-link">Edit</span></td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Hospital D</strong>
+              </td>
+              <td>Peshawar</td>
+              <td>4</td><td>1,750</td>
+              <td>6 mins ago</td><td>
+                <span class="badge b-success">Active</span></td>
+                <td><span class="act-link">View</span><span class="act-link">Edit</span></td>
+              </tr>
+              
+            <tr>
+              <td><strong>Hospital E</strong></td>
+              <td>Multan</td>
+              <td>5</td>
+              <td>2,500</td>
+              <td>7 mins ago</td>
+              <td><span class="badge b-success">Active</span></td>
+              <td><span class="act-link">View</span>
+                <span class="act-link">Edit</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Hospital F</strong>
+              </td>
+              <td>Quetta</td>
+              <td>3</td><td>1,200</td>
+              <td>15 mins ago</td>
+              <td><span class="badge b-warn">Idle</span>
+              </td><td><span class="act-link">View</span>
+                <span class="act-link">Edit</span></td></tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>renderLayout('Hospitals');</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Explainability Parkinson's AI System</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="layout">
+  <div id="sidebar-placeholder"></div>
+  <div class="main">
+    <div id="topbar-placeholder"></div>
+    <div class="page-content">
+
+      <div class="page-header">
+        <h1>Explainability (SHAP)</h1>
+        <p>Model explanation for last prediction</p>
+      </div>
+
+      <div class="shap-grid">
+        <div class="card">
+          <h3>Feature Importance</h3>
+
+          <div class="bar-container">
+            <div class="bar-row">
+              <span class="bar-lbl">UPDRS Score</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:95%;background:#1e6ec8;"></div>
+              </div><span class="bar-val">0.38</span>
+            </div>
+              
+            <div class="bar-row">
+              <span class="bar-lbl">Tremor Severity</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:60%;background:#1a9e5f;"></div>
+              </div>
+              <span class="bar-val">0.24</span>
+            </div>
+
+            <div class="bar-row">
+              <span class="bar-lbl">Movement Speed</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:45%;background:#e6a817;"></div>
+              </div>
+              <span class="bar-val">0.18</span>
+            </div>
+
+            <div class="bar-row">
+              <span class="bar-lbl">Voice Frequency</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:28%;background:#e07b30;"></div>
+              </div>
+              <span class="bar-val">0.11</span>
+            </div>
+
+            <div class="bar-row">
+              <span class="bar-lbl">Age</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:17%;background:#d63c3c;"></div>
+              </div>
+              <span class="bar-val">0.06</span>
+            </div>
+
+            <div class="bar-row">
+              <span class="bar-lbl">Gender</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:8%;background:#8f96a3;"></div>
+              </div>
+              <span class="bar-val">0.03</span>
+            </div>
+        
+          </div>
+
+
+          <div style="display:flex;justify-content:space-between;font-size:11px;margin-top:12px;">
+            <span>0.0</span><span>0.1</span><span>0.2</span><span>0.3</span><span>0.4</span>
+          </div>
+          <div class="chart-label">SHAP Value Impact on Prediction</div>
+        </div>
+
+        <div class="card">
+          <h3>Explanation Summary</h3>
+
+          <p style="font-size:13px;margin-bottom:14px;">The model predicts <strong>High Risk</strong> of progression mainly because of:</p>
+
+          <div class="exp-points">
+            <div class="exp-item"><div class="exp-dot" style="background:#1e6ec8;"></div><span>UPDRS Score contributed <strong style="color:#1e6ec8;">38%</strong></span></div>
+            <div class="exp-item"><div class="exp-dot" style="background:#1a9e5f;"></div><span>Tremor Severity contributed <strong style="color:#1a9e5f;">24%</strong></span></div>
+            <div class="exp-item"><div class="exp-dot" style="background:#e6a817;"></div><span>Movement Speed contributed <strong style="color:#e6a817;">18%</strong></span></div>
+            <div class="exp-item"><div class="exp-dot" style="background:#e07b30;"></div><span>Voice Frequency contributed <strong style="color:#e07b30;">11%</strong></span></div>
+            <div class="exp-item"><div class="exp-dot" style="background:#d63c3c;"></div><span>Age contributed <strong style="color:#d63c3c;">6%</strong></span></div>
+            <div class="exp-item"><div class="exp-dot" style="background:#8f96a3;"></div><span>Gender contributed <strong style="color:#8f96a3;">3%</strong></span></div>
+          </div>
+          <div class="shap-note">SHAP values show how much each feature contributed to the prediction.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>renderLayout('Explainability');</script>
+</body>
+</html>

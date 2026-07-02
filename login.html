@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Login – Parkinson's AI System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="login-body">
+<div class="login-wrap">
+  <div class="login-left">
+    <div class="login-brand">
+      <div class="brand-ico">🧠</div>
+      <h1>Parkinson's AI System</h1>
+      <p>Federated Learning &amp; Explainable AI for Better Healthcare</p>
+    </div>
+    <div class="login-features">
+      <div class="feat-item"><span class="feat-ico">🔒</span><span>Secure &amp; Privacy-Preserving</span></div>
+      <div class="feat-item"><span class="feat-ico">🎯</span><span>94.2% Prediction Accuracy</span></div>
+      <div class="feat-item"><span class="feat-ico">🏥</span><span>12 Hospitals Connected</span></div>
+    </div>
+  </div>
+  <div class="login-right">
+    <div class="login-card">
+      <h2>Welcome Back</h2>
+      <p class="login-sub">Sign in to your account</p>
+      <div class="field-group">
+        <label>Email</label>
+        <input type="email" id="l-email" placeholder="Enter your email"/>
+      </div>
+      <div class="field-group">
+        <label>Password</label>
+        <div class="pw-wrap">
+          <input type="password" id="l-pass" placeholder="Enter your password"/>
+          <button class="toggle-pw" onclick="var p=document.getElementById('l-pass');p.type=p.type==='password'?'text':'password'">👁</button>
+        </div>
+      </div>
+      <div class="login-foot">
+        <label class="chk-lbl"><input type="checkbox"/> Remember me</label>
+        <a href="#" class="forgot">Forgot Password?</a>
+      </div>
+      <button class="btn-login" onclick="doLogin()">Login</button>
+      <p class="login-contact">No account? <a href="#">Contact Admin</a></p>
+    </div>
+  </div>
+</div>
+<script>
+function doLogin() {
+  var e = document.getElementById('l-email').value;
+  var p = document.getElementById('l-pass').value;
+  if (!e || !p) { alert('Please enter email and password.'); return; }
+  window.location.href = 'dashboard.html';
+}
+</script>
+</body>
+</html>

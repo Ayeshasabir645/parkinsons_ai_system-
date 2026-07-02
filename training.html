@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Training – Parkinson's AI System</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="layout">
+  <div id="sidebar-placeholder"></div>
+  <div class="main">
+    <div id="topbar-placeholder"></div>
+    <div class="page-content">
+
+      <div class="page-header">
+        <h1>Training Dashboard</h1>
+        <p>Federated Learning Training Overview</p>
+      </div>
+
+      <div class="t-stats">
+        <div class="t-card">
+          <div class="t-label">Current Round</div>
+          <div class="t-value">15</div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-label">Total Rounds</div>
+          <div class="t-value">50</div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-label">Global Accuracy</div>
+          <div class="t-value">94.2%</div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-label">Aggregation</div>
+          <div class="t-value" style="font-size:18px;">KRUM</div>
+          <div class="t-sub">+ FedProx</div>
+        </div>
+
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Training Progress</h3>
+          <div class="chart-legend">
+            <span><span class="leg-sq" style="background:#1e6ec8;"></span>Accuracy</span>
+            <span><span class="leg-sq" style="background:#d63c3c;"></span>Loss</span>
+          </div>
+          <div class="fake-chart" id="training-chart"></div>
+          <div class="chart-axis"><span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span></div>
+          <div class="chart-label">Rounds</div>
+        </div>
+        <div class="card">
+          <h3>Client Updates</h3>
+
+          <table class="data-table">
+
+            <tr>
+              <th>Hospital</th>
+              <th>Samples</th>
+              <th>Status</th>
+              <th>Time</th>
+            </tr>
+
+            
+              <tr>
+                <td>Hospital A</td>
+                <td>2,350</td><td>
+                  <span class="badge b-success">Uploaded</span>
+                </td>
+                <td>10:45 AM</td>
+              </tr>
+
+              <tr>
+                <td>Hospital B</td>
+                <td>1,980</td><td>
+                  <span class="badge b-success">Uploaded</span>
+                </td>
+                <td>10:43 AM</td>
+              </tr>
+
+              <tr>
+                <td>Hospital C</td>
+                <td>2,100</td>
+                <td><span class="badge b-success">Uploaded</span></td>
+                <td>10:42 AM</td>
+              </tr>
+
+              <tr>
+                <td>Hospital D</td>
+                <td>1,750</td><td>
+                  <span class="badge b-success">Uploaded</span>
+                </td>
+                <td>10:41 AM</td>
+              </tr>
+
+              <tr>
+                <td>Hospital E</td>
+                <td>2,500</td>
+                <td><span class="badge b-success">Uploaded</span>
+                </td>
+                <td>10:40 AM</td>
+              </tr>
+           
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Training Logs</h3>
+        <div class="log-box">
+          <div>Round 15 Completed |  Global Model Updated | Accuracy: 94.2% | Loss: 0.18 | 10:45 AM</div>
+          <div style="margin-top:7px;">Round 16 starting… waiting for client updates.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>
+  renderLayout('Training');
+  buildChart('training-chart',
+    [50,60,68,74,79,83,86,88,90,92,94],
+    [88,75,62,52,43,35,28,22,18,14,10]);
+</script>
+</body>
+</html>

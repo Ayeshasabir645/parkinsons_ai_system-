@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dashboard Parkinson's AI System</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="layout">
+  <div id="sidebar-placeholder"></div>
+  <div class="main">
+    <div id="topbar-placeholder"></div>
+    <div class="page-content">
+
+      <div class="page-header">
+        <h1>Dashboard</h1>
+        <p>Overview of Federated Learning System. Date: May 14, 2025</p>
+      </div>
+
+      <div class="grid4">
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Total Hospitals</div>
+            <div class="stat-value">12</div>
+            <div class="stat-sub neu">Active</div>
+          </div>
+          <div class="stat-ico"></div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Prediction Accuracy</div>
+            <div class="stat-value">94.2%</div>
+            <div class="stat-sub pos">+2.4% this week</div>
+          </div><div class="stat-ico"></div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Connected Clients</div>
+            <div class="stat-value">28</div>
+            <div class="stat-sub neu">Online</div>
+          </div><div class="stat-ico"></div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Training Status</div>
+            <div class="stat-value" style="font-size:20px;">Running</div>
+            <div class="stat-sub neu">Global Model</div>
+          </div>
+          <div class="stat-ico"></div></div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Global Model Performance</h3>
+          <div class="chart-legend">
+            <span><span class="leg-sq" style="background:#1e6ec8;"></span>Accuracy</span>
+            <span><span class="leg-sq" style="background:#d63c3c;"></span>Loss</span>
+          </div>
+          <div class="fake-chart" id="perf-chart"></div>
+          <div class="chart-axis"><span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span></div>
+          <div class="chart-label">Epochs</div>
+        </div>
+
+        <div class="card">
+          <h3>Hospital Participation</h3>
+          <div class="donut-wrap">
+            <div class="donut-ring"></div>
+            <div class="donut-legend">
+              <div class="leg-item"><div class="leg-dot" style="background:#1e6ec8;"></div>Hospital A (28%)</div>
+              <div class="leg-item"><div class="leg-dot" style="background:#1a9e5f;"></div>Hospital B (24%)</div>
+              <div class="leg-item"><div class="leg-dot" style="background:#e6a817;"></div>Hospital C (20%)</div>
+              <div class="leg-item"><div class="leg-dot" style="background:#d63c3c;"></div>Hospital D (16%)</div>
+              <div class="leg-item"><div class="leg-dot" style="background:#8f96a3;"></div>Others (12%)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Recent Activities</h3>
+          <table class="data-table">
+          
+              <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Hospital</th>
+                <th>Status</th>
+              </tr>
+          
+
+            <tr>
+                <td>10:45 AM</td>
+                <td>Model Updated</td>
+                <td>Hospital A</td>
+                <td><span class="badge b-success">Success</span></td>
+            </tr>
+
+            <tr>
+              <td>10:30 AM</td>
+              <td>Client Connected</td>
+              <td>Hospital B</td>
+              <td><span class="badge b-success">Success</span></td>
+            </tr>
+
+            <tr>
+                <td>10:15 AM</td>
+                <td>Training Round Completed</td>
+                <td>Hospital C</td>
+                <td><span class="badge b-success">Success</span>
+                </td>
+            </tr>
+
+          </table>
+
+        </div>
+        <div class="card">
+          <h3>System Status</h3>
+          <div class="status-list">
+            <div class="status-row"><span>Server Status</span>Online</span></div>
+            <div class="status-row"><span>Global Model</span>Up to date</span></div>
+            <div class="status-row"><span>Last Training</span>2 mins ago</span></div>
+            <div class="status-row"><span>Security</span><span>Secure</span></div>
+            <div class="status-row"><span>Data Privacy</span><span>Federated</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>
+  renderLayout('Dashboard');
+  buildChart('perf-chart',
+    [55,62,70,75,80,84,87,89,91,93,94],
+    [90,80,68,58,48,38,30,24,18,14,10]);
+</script>
+</body>
+</html>
